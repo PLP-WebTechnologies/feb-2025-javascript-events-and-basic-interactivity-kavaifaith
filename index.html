@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deli Burger 🍔</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1><i class="fas fa-hamburger"></i> Deli Burger Builder</h1>
+      <p>Create your perfect burger in 4 easy steps!</p>
+    </div>
+  </header>
+  
+  <div class="container">
+    <!-- Step Indicator -->
+    <div class="step-indicator">
+      <div class="step active" id="step1">1</div>
+      <div class="step" id="step2">2</div>
+      <div class="step" id="step3">3</div>
+      <div class="step" id="step4">4</div>
+    </div>
+    
+    <!-- Step 1: Registration -->
+    <div class="step-content active" id="step1-content">
+      <form id="registrationForm">
+        <h2>Create Your Account</h2>
+        <p>Start by creating your account to save your burger preferences.</p>
+        
+        <div class="form-group">
+          <label for="name">Full Name *</label>
+          <input type="text" id="name" required>
+          <div class="error" id="name-error">Please enter your name</div>
+        </div>
+        
+        <div class="form-group">
+          <label for="email">Email Address *</label>
+          <input type="email" id="email" required>
+          <div class="error" id="email-error">Please enter a valid email</div>
+        </div>
+        
+        <div class="form-group">
+          <label for="password">Create Password *</label>
+          <input type="password" id="password" required minlength="8">
+          <div class="error" id="password-error">Password must be at least 8 characters</div>
+        </div>
+        
+        <div class="navigation-buttons">
+          <button type="button" class="btn" id="next1">Next: Choose Bun <i class="fas fa-arrow-right"></i></button>
+        </div>
+      </form>
+    </div>
+    
+    <!-- Step 2: Bun Selection -->
+    <div class="step-content" id="step2-content">
+      <h2>Choose Your Bun</h2>
+      <p>Select the perfect foundation for your burger masterpiece.</p>
+      
+      <div class="bun-options">
+        <div class="bun-option" data-bun="sesame">
+          <img src="https://cdn.pixabay.com/photo/2018/04/13/20/52/bread-3317889_640.png" alt="Sesame Bun">
+          <h3>Sesame Bun</h3>
+        </div>
+        
+        <div class="bun-option" data-bun="wholewheat">
+          <img src="https://cdn.pixabay.com/photo/2018/04/13/20/52/bread-3317887_640.png" alt="Whole Wheat Bun">
+          <h3>Whole Wheat</h3>
+        </div>
+        
+        <div class="bun-option" data-bun="glutenfree">
+          <img src="https://cdn.pixabay.com/photo/2018/04/13/20/52/bread-3317888_640.png" alt="Gluten-Free Bun">
+          <h3>Gluten-Free</h3>
+        </div>
+        
+        <div class="bun-option" data-bun="pretzel">
+          <img src="https://cdn.pixabay.com/photo/2018/04/13/20/52/bread-3317886_640.png" alt="Pretzel Bun">
+          <h3>Pretzel Bun</h3>
+        </div>
+      </div>
+      
+      <div class="navigation-buttons">
+        <button type="button" class="btn btn-secondary" id="prev2"><i class="fas fa-arrow-left"></i> Back</button>
+        <button type="button" class="btn" id="next2">Next: Add Toppings <i class="fas fa-arrow-right"></i></button>
+      </div>
+    </div>
+    
+    <!-- Step 3: Toppings Selection -->
+    <div class="step-content" id="step3-content">
+      <h2>Add Toppings</h2>
+      <p>Select as many toppings as you want (double-click any topping for a surprise!).</p>
+      
+      <div class="toppings-grid">
+        <div class="topping" data-topping="cheese">
+          <img src="https://cdn.pixabay.com/photo/2016/03/05/22/18/american-1239241_640.png" alt="Cheese">
+          <h3>Cheese</h3>
+        </div>
+        
+        <div class="topping" data-topping="bacon">
+          <img src="https://cdn.pixabay.com/photo/2013/07/12/18/39/bacon-153674_640.png" alt="Bacon">
+          <h3>Bacon</h3>
+        </div>
+        
+        <div class="topping" data-topping="lettuce">
+          <img src="https://cdn.pixabay.com/photo/2013/07/12/18/57/lettuce-154328_640.png" alt="Lettuce">
+          <h3>Lettuce</h3>
+        </div>
+        
+        <div class="topping" data-topping="tomato">
+          <img src="https://cdn.pixabay.com/photo/2013/07/12/18/56/tomatoes-154322_640.png" alt="Tomato">
+          <h3>Tomato</h3>
+        </div>
+        
+        <div class="topping" data-topping="onion">
+          <img src="https://cdn.pixabay.com/photo/2013/07/12/18/56/onion-154323_640.png" alt="Onion">
+          <h3>Onion</h3>
+        </div>
+        
+        <div class="topping" data-topping="pickles">
+          <img src="https://cdn.pixabay.com/photo/2013/07/12/18/56/pickles-154321_640.png" alt="Pickles">
+          <h3>Pickles</h3>
+        </div>
+        
+        <div class="topping" data-topping="mushrooms">
+          <img src="https://cdn.pixabay.com/photo/2013/07/12/18/57/mushroom-154325_640.png" alt="Mushrooms">
+          <h3>Mushrooms</h3>
+        </div>
+        
+        <div class="topping" data-topping="avocado">
+          <img src="https://cdn.pixabay.com/photo/2013/07/12/18/57/avocado-154326_640.png" alt="Avocado">
+          <h3>Avocado</h3>
+        </div>
+      </div>
+      
+      <div class="navigation-buttons">
+        <button type="button" class="btn btn-secondary" id="prev3"><i class="fas fa-arrow-left"></i> Back</button>
+        <button type="button" class="btn" id="next3">Next: Add Sauces <i class="fas fa-arrow-right"></i></button>
+      </div>
+    </div>
+    
+    <!-- Step 4: Sauces Selection -->
+    <div class="step-content" id="step4-content">
+      <h2>Add Sauces</h2>
+      <p>Select one or more sauces to complete your burger (press 'S' to submit your order).</p>
+      
+      <div class="sauces-grid">
+        <div class="sauce" data-sauce="ketchup">
+          <img src="https://cdn.pixabay.com/photo/2013/07/12/18/56/ketchup-154319_640.png" alt="Ketchup">
+          <h3>Ketchup</h3>
+        </div>
+        
+        <div class="sauce" data-sauce="mayo">
+          <img src="https://cdn.pixabay.com/photo/2013/07/12/18/56/mayonnaise-154318_640.png" alt="Mayo">
+          <h3>Mayo</h3>
+        </div>
+        
+        <div class="sauce" data-sauce="bbq">
+          <img src="https://cdn.pixabay.com/photo/2013/07/12/18/56/bbq-sauce-154317_640.png" alt="BBQ">
+          <h3>BBQ</h3>
+        </div>
+        
+        <div class="sauce" data-sauce="mustard">
+          <img src="https://cdn.pixabay.com/photo/2013/07/12/18/56/mustard-154320_640.png" alt="Mustard">
+          <h3>Mustard</h3>
+        </div>
+        
+        <div class="sauce" data-sauce="hotsauce">
+          <img src="https://cdn.pixabay.com/photo/2013/07/12/18/56/hot-sauce-154316_640.png" alt="Hot Sauce">
+          <h3>Hot Sauce</h3>
+        </div>
+        
+        <div class="sauce" data-sauce="honeymustard">
+          <img src="https://cdn.pixabay.com/photo/2013/07/12/18/56/honey-mustard-154315_640.png" alt="Honey Mustard">
+          <h3>Honey Mustard</h3>
+        </div>
+      </div>
+      
+      <div id="burger-preview-container">
+        <h3>Your Burger Preview</h3>
+        <div id="burger-preview"></div>
+      </div>
+      
+      <div class="navigation-buttons">
+        <button type="button" class="btn btn-secondary" id="prev4"><i class="fas fa-arrow-left"></i> Back</button>
+        <button type="button" class="btn" id="submitOrder">Submit Order <i class="fas fa-check"></i></button>
+      </div>
+    </div>
+    
+    <!-- Order Summary (hidden until submission) -->
+    <div class="step-content" id="summary-content">
+      <div id="summary">
+        <h2>Order Confirmation!</h2>
+        <p>Thank you for your order. Here's what you've created:</p>
+        
+        <div class="summary-item">
+          <span class="summary-label">Name:</span>
+          <span id="summary-name"></span>
+        </div>
+        
+        <div class="summary-item">
+          <span class="summary-label">Email:</span>
+          <span id="summary-email"></span>
+        </div>
+        
+        <div class="summary-item">
+          <span class="summary-label">Bun Type:</span>
+          <span id="summary-bun"></span>
+        </div>
+        
+        <div class="summary-item">
+          <span class="summary-label">Toppings:</span>
+          <span id="summary-toppings"></span>
+        </div>
+        
+        <div class="summary-item">
+          <span class="summary-label">Sauces:</span>
+          <span id="summary-sauces"></span>
+        </div>
+        
+        <div class="summary-item" style="margin-top: 20px;">
+          <button type="button" class="btn" id="newOrder"><i class="fas fa-plus"></i> Create Another Burger</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
